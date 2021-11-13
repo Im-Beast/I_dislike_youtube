@@ -29,8 +29,8 @@ type DeployResponse = {
 ## Example
 ### Request
 ```javascript
-https://i-dislike-youtube.deno.dev/?id=dQw4w9WgXcQ
-// or https://i-dislike-youtube.deno.dev/?id=dQw4w9WgXcQ&key=YOUROAUTHKEY
+https://i-dislike-youtube.deno.dev?id=dQw4w9WgXcQ
+// or https://i-dislike-youtube.deno.dev?id=dQw4w9WgXcQ&key=YOUROAUTHKEY
 ```
 ### Response
 ```json
@@ -43,3 +43,5 @@ https://i-dislike-youtube.deno.dev/?id=dQw4w9WgXcQ
  "favorites": "0"
 }
 ```
+
+# This API will probably break on December 13, 2021
