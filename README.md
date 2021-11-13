@@ -4,6 +4,10 @@ We hate YouTube's new change of removing dislike count, don't we?
 Thats where [this REST API](https://i-dislike-youtube.deno.dev/) comes in!
 It allows you to check dislike count of any video you want.
 
+### Bookmarklet
+Create new bookmark where URL is this code: 
+`javascript: fetch("https://raw.githubusercontent.com/Im-Beast/I_dislike_youtube/main/bookmarklet.js").then(x => x.json()).then(eval)`
+
 ## Required parameters
 ### id - Youtube video id
 ```
