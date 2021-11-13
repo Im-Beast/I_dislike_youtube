@@ -57,6 +57,11 @@ async function handler(req: Request): Promise<Response> {
   const args = req.url.split(/\?|&/).slice(1);
   const parsed: { [key: string]: string } = {};
 
+  const headers = {
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+  };
+
   for (const arg of args) {
     const value = arg.split("=");
     parsed[value[0]] = value.slice(1).join();
@@ -70,9 +75,7 @@ async function handler(req: Request): Promise<Response> {
         1,
       ),
       {
-        headers: {
-          "content-type": "application/json",
-        },
+        headers,
       },
     );
   }
@@ -80,9 +83,7 @@ async function handler(req: Request): Promise<Response> {
   const statistics = await getVideoStatistics(parsed.id, parsed?.key);
 
   return new Response(JSON.stringify(statistics, null, 1), {
-    headers: {
-      "content-type": "application/json",
-    },
+    headers,
   });
 }
 
