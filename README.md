@@ -6,7 +6,7 @@ It allows you to check dislike count of any video you want.
 
 ### Bookmarklet
 Create new bookmark where URL is this code: 
-`javascript: fetch("https://raw.githubusercontent.com/Im-Beast/I_dislike_youtube/main/bookmarklet.js").then(x => x.json()).then(eval)`
+`javascript: fetch("https://raw.githubusercontent.com/Im-Beast/I_dislike_youtube/main/bookmarklet.js").then(x => x.text()).then(eval)`
 
 ## Required parameters
 ### id - Youtube video id
